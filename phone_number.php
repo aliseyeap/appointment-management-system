@@ -20,7 +20,7 @@ function generateOTP() {
 
 // Function to send the OTP via WhatsApp using Fonnte API
 function sendOTP($phoneNumber, $otp) {
-    $apiToken = 'xNAVREMNuZm7MmU8ichz';
+    $apiToken = 'your_fontee_api_token_here';
     $message = "Your OTP for login is: $otp. This code will expire in 5 minutes. For your security, please do not share this code with anyone. ";
 
     $data = [

@@ -10,7 +10,7 @@ session_start();
 
 // Function to send a WhatsApp message using Fonnte API
 function sendWhatsAppMessage($phoneNumber, $message) {
-    $apiToken = 'xNAVREMNuZm7MmU8ichz';
+    $apiToken = 'your_fontee_api_token_here';
 
     $data = [
         'target' => $phoneNumber,
