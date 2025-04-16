@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: lavender;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: indigo;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Login and SignUp*/
+#left-column {
+    width: 50%;
+    float: left;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+  }
+  
+  #left-column img {
+    max-width: 65%; 
+    vertical-align: middle; 
+  }
+  
+  #right-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+/*Login*/
+.login-form {
+    width: 392px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom right, #ffcfe7, #bba2c8);
+    animation: waveBackground 5s infinite alternate;
+
+    @keyframes waveBackground {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}
+  
+.login-form-title {
+    color: midnightblue;
+}
+  
+.login-form div {
+    margin-bottom: 10px;
+}
+  
+.login-form input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid lavender;
+    border-radius: 4px;
+}
+  
+.login-form button {
+    width: 30%;
+    padding: 10px;
+    background-color: indigo;
+    color: lavender;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-left: 36%;
+}
+
+.login-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px
+  }
+  
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.p{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+}
+
+.message-box {
+    margin-top: 10px;
+}
+  
+.error-message {
+    background-color: #ffdddd;
+    color: red;
+    margin-top: 10px; /* Adjust the margin as needed */
+    text-align: center;
+}
+
+.success-message {
+    background-color: #e0ffdd;
+    color: limegreen;
+    margin-top: 10px; /* Adjust the margin as needed */
+    text-align: center;
+}
+
+.inform-message{
+    background-color: #ddedff;
+    color: rgb(58, 50, 205);
+    margin-top: 10px; /* Adjust the margin as needed */
+    text-align: center;
+}
+  
+/*SignUp*/
+.signup-form {
+    margin-top: -20px;
+    width: 392px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom right, #ffcfe7, #bba2c8);
+    animation: waveBackground 5s infinite alternate;
+
+    @keyframes waveBackground {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}
+  
+.signup-form-title {
+    color: indigo;
+    margin-top: 10px;
+}
+  
+.signup-form div {
+    margin-bottom: 10px;
+}
+  
+.signup-form input {
+    width: 95%;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+.signup-form button {
+    width: 30%;
+    padding: 10px;
+    background-color: indigo;
+    color: lavender;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-left: 36%;
+}
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .error {
+    background-color: #ffdddd;
+    color: red;
+  }
+  
+  .success {
+    background-color: #ddffdd;
+    color: green;
+  }
+  
+  .signup-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px
+  }
+  
+  select {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

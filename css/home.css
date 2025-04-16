@@ -1,0 +1,1439 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+body {
+    margin: 0;
+    font-family: 'Titillium Web';
+    font-size: 16px;
+    background-color: #FFFBF5;
+    margin-left: 120px; 
+    margin-right: 120px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*Navigation bar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    background-color: #FFF5E4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.logo h1 {
+    font-family: 'Dancing Script', cursive; 
+    font-size: 28px;
+    color: #ff5e7d; 
+    padding: 10px 20px;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.nav li {
+    display: inline-block;
+    margin-right: 20px;
+    list-style: outside none none;
+    padding: 0;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #900C3F; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav a {
+    padding: .5em .8em;
+}
+  
+.nav a::before,
+.nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+  
+.nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid orangered;
+    border-right: 3px solid orange;
+    transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid orangered;
+    border-left: 3px solid orange;
+    transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.nav a:hover {
+    color: #900C3F;
+}
+
+.appointment-btn {
+    padding: 10px 20px;
+    background-color: #900C3F; 
+    color: #fff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.appointment-btn:hover {
+    background-color: #e76d9c;
+    color: #fff;
+    border: 1px solid #e76d9c;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn,
+.signup-btn,
+.my-account-btn {
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: #fff;
+    color: #900C3F; 
+    text-decoration: none;
+    border: 1px solid #900C3F; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.login-btn:hover,
+.signup-btn:hover,
+.my-account-btn:hover {
+    background-color: #f670a4;
+    color: #FFF4F4;
+    border: none;
+}
+
+/* Slide */
+.slideshow-container {
+    height: 450px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: block; 
+}
+
+.slides img {
+    width: 100%;
+    display: none;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+    background-color: #b6264f;
+}
+
+.next {
+    right: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    background-color: #d02c5b;
+}
+
+.dot.active {
+    background-color: #f6a8c6;
+}
+
+/* Service Provide Section */
+.service-provide {
+    font-family: 'Titillium Web';
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to bottom, #ead7eb, #E7CBCB, #f7bbb6);
+    padding: 25px 0;
+}
+
+.service-provide h2 {
+    font-size: 40px;
+    margin: auto;
+    margin-bottom: revert-layer;
+    color: #583D72;
+    text-transform: uppercase;
+}
+
+.service-box {
+    display: inline-block;
+    text-align: center;
+    width: 22%;
+    padding: 20px;
+    margin: 0 10px; 
+    border: 2px solid purple; 
+    border-radius: 15px 50px;
+    margin-bottom: 30px;
+}
+
+.service-box img {
+    width: 100%; 
+    max-height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.service-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-top: 1px dashed #900C3F;
+    border-bottom: 1px dashed #900C3F;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #555;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.more-services-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3F1D38;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.more-services-btn:hover {
+    background-color: #fff;
+    color: #3F1D38;
+    border: 1px solid #3F1D38;
+}
+
+.space{
+    height: 25px;
+    background-color: #fff;
+}
+
+/*Footer*/
+.footer {
+    background: linear-gradient(to bottom, #ffece5cb, #fec8d8c3);
+    color:#f03167;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    border-right: 2px;
+	border-left: 0;
+	border-style: solid;
+    padding: 0 4vw 4vw;
+    border-image: linear-gradient(to bottom, #F7B679, #E77C7C, #484C7F) 1 100%;
+}
+
+.footer-section:last-child {
+	border-right: 0;
+}
+
+.footer-section h2 {
+    color: orangered;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.social-icon {
+    color: #900C3F; 
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 10px;
+    background-color:  #FFC5C5;
+    color: #900C3F;
+}
+
+.social-buttons {
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px 20px;
+}
+
+.social-buttons__button {
+    margin: 5px;
+}
+
+.social-button {
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+.social-icons {
+    width: 100%;
+}
+
+.social-button__inner {
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+.social-button i,
+.social-button svg {
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+.social-button i {
+    font-size: 26px;
+}
+
+.social-button svg {
+height: 30%;
+width: 30%;
+}
+
+.social-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.social-button:focus,
+.social-button:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-button:focus::after,
+.social-button:hover::after {
+    width: 100%;
+    height: 100%;
+    margin-left: -50%;
+}
+
+.social-button--facebook {
+color: #3b5999;
+}
+
+.social-button--facebook::after {
+background: #3b5999;
+}
+
+.social-button--whatsapp {
+color: #25D366;
+}
+
+.social-button--whatsapp::after {
+background: #25D366;
+}
+
+.social-button--instagram {
+color: #e4405f;
+}
+.social-button--instagram::after {
+background: #e4405f;
+}
+
+/*About Us Page*/
+.about-container {
+    background-color: #f5e4f6;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    flex: 1;
+}
+
+.text p{
+    margin: 0px 30px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 70%;
+    border-radius: 5px;
+}
+
+.image img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+  
+.row h2 {
+    color: indigo;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.row h3 {
+    color: indigo;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.vision-mission-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vision,
+.mission {
+    width: 48%; 
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    margin-bottom: 10px;
+}
+
+.circle:hover{
+    background-color: #ff5e7d;
+}
+
+.circle i {
+    color: white;
+    font-size: 36px;
+}
+
+.vision p,
+.mission p {
+    margin: 0px 20px;
+    text-align: center;
+}
+
+.product-content {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-content h3{
+    text-align: center;
+    margin-top: 70px;
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.product-image img {
+    max-width: 60%;
+    border-radius: 5px;
+}
+
+.product-image img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+.product-text {
+    flex: 1;
+}
+
+.product-text p{
+    margin: 0px 30px;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 30%; 
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 100%; 
+}
+
+/*Contact Us*/
+.get-in-touch-container {
+    background-color: white;
+    position: relative;
+}
+
+.get-in-touch-container img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.get-in-touch-container h2 {
+    text-align: center;
+    color: indigo;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: revert-layer;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the h2 is above the img */
+}
+
+.contact-form-container {
+    margin: 20px 0px;
+    display: flex;
+    background-image: linear-gradient(180deg, #FDF7C3, #FFE15D);
+}
+
+.contact-form-image {
+    flex: 1;
+}
+
+.contact-form-image p{
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.contact-form img {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.contact-form {
+    flex: 2;
+    padding-left: 26px;
+    margin: 20px 0px;
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: indigo;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: indigo;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid lavenderblush;
+    border-radius: 5px;
+    color: #3A0088;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3A0088;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.contact-form button:hover {
+    background-color: lavender;
+    color: #3A0088;
+    border: 1px solid #3A0088;
+}
+
+.contact-container {
+    margin: 20px 0px;
+    display: flex;
+    background-image: linear-gradient(180deg, #FFEECC, #FFDDCC);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.google-maps-container {
+    flex: 1;
+}
+
+.contact-info {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.google-maps {
+    width: 100%;
+    height: 450px;
+    margin: 70px 50px;
+
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: darkblue;
+    border: 1px dashed blue;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    text-align: center;
+    color: #3b5999;
+}
+
+/* Dropdown Container for My Account */
+.my-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.my-account-btn {
+    padding: 10px 32px;
+    margin-left: 20px;
+    background-color: #583D72;
+    color: #fff; 
+    border: 1px solid #583D72; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Titillium Web';
+}
+
+.my-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.my-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.my-dropdown-content a:hover {
+    background-color: lavender;
+    border-radius: 5px;
+}
+
+.my-dropdown:hover .my-dropdown-content {
+    display: block;
+}
+
+.my-dropdown:hover .my-account-btn {
+    background-color: #fff;
+    color: #583D72;
+    border: 1px solid #583D72;
+}
+
+.my-dropdown-content {
+    right: 0;
+    top: 100%;
+}
+
+/* Personal Information Update Form */
+.update-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-form {
+    background-color: white;
+    border: 1px solid pink;
+    margin: 40px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.update-form h2 {
+    text-align: center;
+    color: #f03167;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.profile-picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #900C3F;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.update-form form {
+    margin: 0px 30px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.input-left,
+.input-right {
+    flex: 0 0 48%;
+}
+
+.input-left label,
+.input-right label {
+    display: block;
+    margin: 5px 10px;
+    font-weight: 400;
+    color: #b6264f;
+    text-transform: uppercase;
+}
+
+.input-left input,
+.input-right input,
+.input-left select,
+.input-right select {
+    width: 90%;
+    padding: 8px;
+    margin: 10px;
+    color: #b6264f;
+    border: 1px solid #900C3F;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #e4405f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background-color: #F8E8EE;
+    color: #e4405f;
+    border: 1px solid #ff5e7d;
+}
+
+.deactivate-account {
+    margin: 10px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.deactivate-account h3 {
+    margin-bottom: 10px;
+    color: #6C22A6;
+    text-transform: uppercase;
+}
+
+.deactivate-account p {
+    margin-bottom: 15px;
+    color: #C3ACD0;
+}
+
+.deactivate-account button {
+    padding: 10px 20px;
+    background-color: indigo;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.deactivate-account button:hover {
+    background-color: lavender;
+    color: indigo;
+}
+
+/* Change Password Form */
+.change-password-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.change-password-form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.change-password-form h2 {
+    text-align: center;
+    color: #f03167;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.change-password-form label {
+    display: block;
+    margin: 5px 10px;
+    font-weight: 400;
+    color: #b6264f;
+    text-transform: uppercase;
+}
+
+.change-password-form input {
+    width: 96%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 10px 10px;
+    color: #b6264f;
+    border: 1px solid #900C3F;
+    border-radius: 5px;
+}
+
+.change-password-form button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #e4405f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.change-password-form button:hover {
+    background-color: #F8E8EE;
+    color: #e4405f;
+}
+
+/*Service Page*/
+.service-provided-container {
+    background-color: white;
+    position: relative;
+}
+
+.service-provided-container img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.service-provided-container h2 {
+    text-align: center;
+    color: indigo;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: revert-layer;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the h2 is above the img */
+}
+.service-container {
+    background-color: #f5e4f6;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    flex: 1;
+}
+
+.text p{
+    margin: 0px 30px;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 70%;
+    border-radius: 5px;
+}
+
+.image img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+  
+.row h2 {
+    color: indigo;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.row h3 {
+    color: indigo;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.service-content {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.service-content h3{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.service-content h2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.service-image img {
+    max-width: 60%;
+    border-radius: 5px;
+}
+
+.service-image img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+.service-text {
+    flex: 1;
+}
+
+.service-text p{
+    margin: 0px 30px;
+}
+
+.book-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f65273;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.book-now-btn:hover {
+    background-color: white;
+    color: #f65273;
+    border: 1px solid #f65273;
+}
+
+/* My Appointment Table */
+.my-appointment-table {
+    margin: 26px;
+    text-align: center;
+    font-family: 'Titillium Web';
+    font-size: 16px;
+}
+
+.my-appointment-table h2 {
+    color: #f03167;
+    font-size: 40px;
+    font-family: 'Titillium Web';
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #E30B5C;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #E30B5C;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightyellow;
+}
+
+tbody tr:hover {
+    background-color: #ffeef7;
+}
+
+td button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin: 8px auto;
+}
+
+.reschedule-btn,
+.cancel-btn {
+    padding: 10px 15px;
+    margin: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.reschedule-btn {
+    background-color: #143268;
+}
+
+.cancel-btn {
+    background-color: #ff5a4c;
+}
+
+.reschedule-btn:hover {
+    background-color: aliceblue;
+    color: #143268;
+    border: 1px solid #143268;
+}
+
+.cancel-btn:hover {
+    background-color: lightyellow;
+    color: #ff5a4c;
+    border: 1px solid #ff5a4c;
+}
+
+.disabled-reschedule-btn,
+.disabled-cancel-btn {
+    cursor: not-allowed;
+}
+
+.disabled-btn {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Reschedule Form */
+.reschedule-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.reschedule-form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.reschedule-form h2 {
+    text-align: center;
+    color: #f03167;
+    font-size: 26px;
+}
+
+.reschedule-form label {
+    display: block;
+    margin: 10px 0;
+}
+
+.datetime-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-container,
+.time-container {
+    flex: 1;
+    margin-right: 10px; 
+}
+
+.reschedule-form input,
+.reschedule-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Titillium Web';
+}
+
+.reschedule-form button {
+    background-color: #f03167;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'Titillium Web';
+}
+
+.reschedule-form button:hover {
+    background-color: white;
+    color: #f03167;
+    border: 1px solid #f03167;
+}
+
+/*For staff php*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    padding: 10px 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #f03167;
+    border: 2px solid #f03167;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Display dropdown on hover */
+.profile-btn:hover .dropdown-content {
+    display: block;
+}
+
+/* Add styling for the dropdown menu items */
+.profile-btn:hover {
+    background-color: lavenderblush;
+    color: #f03167;
+}
+
+/*Appointment Form*/
+.appointment-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.appointment-form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.appointment-form h2 {
+    text-align: center;
+    color: #f03167;
+    font-size: 26px;
+}
+
+.appointment-form label {
+    display: block;
+    margin: 10px 0;
+}
+.datetime-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-container,
+.time-container {
+    flex: 1;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.appointment-form input,
+.appointment-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.appointment-form button {
+    background-color: #f03167;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.appointment-form button:hover {
+    background-color: #d02c5b;
+}

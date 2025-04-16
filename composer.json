@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "mpdf/mpdf": "*",
+        "setasign/fpdf": "*",
+        "phpoffice/phpspreadsheet": "1.17.1",
+        "ext-gd": "*"
+    }
+}

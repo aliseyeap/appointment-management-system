@@ -1,0 +1,1600 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web';
+    font-size: 16px;
+}
+
+/*Sidebar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 320px;
+    background: indigo;
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.sidebar.close{
+    width: 78px;
+}
+
+.sidebar .logo-details{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo-details i{
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 78px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+    padding-left: 50px;
+    padding-top: 26px;
+    font-family: 'Dancing Script', cursive; 
+    font-size: 34px;
+}
+
+.sidebar.close .logo-details .logo_name{
+    transition-delay: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.close .logo-details img{
+    padding-left: 16px; 
+    padding-top: 14px; 
+    width:80%;
+}
+
+.sidebar.close .logo-details img {
+    display: block;
+}
+
+.sidebar .logo-details img {
+    display: none;
+}
+
+
+.sidebar .nav-links{
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar.close .nav-links{
+    overflow: visible;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover{
+    background: #1d1b31;
+}
+
+.sidebar .nav-links li .iocn-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar.close .nav-links li .iocn-link{
+    display: block
+}
+
+.sidebar .nav-links li i{
+    height: 60px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.showMenu i.arrow{
+    transform: rotate(-180deg);
+}
+
+.sidebar.close .nav-links i.arrow{
+    display: none;
+}
+
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .nav-links li a .link_name{
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.sidebar.close .nav-links li a .link_name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links li .sub-menu{
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #1d1b31;
+    display: none;
+    font-size: 18px;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{
+    display: block;
+}
+
+.sidebar .nav-links li .sub-menu a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover{
+    opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li .sub-menu .link_name{
+    display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name{
+    font-size: 16px;
+    opacity: 1;
+    display: block;
+}
+
+.sidebar .nav-links li .sub-menu.blank{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.active {
+    background-color: mediumpurple;
+    color: #fff;
+}
+
+/*Content*/
+.content {
+    width: 97%;
+    background-color: snow;
+    height: 93%;
+    margin-top: 16px;
+    margin-left: 20px;
+    border-top: 3px solid indigo;
+    border-radius: 5px;
+    }
+
+.content-header {
+    padding-top: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content-tools {
+    margin-left: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: lavender;
+    background-color: indigo;
+    border: 1px solid indigo;
+}
+
+.btn-primary:hover {
+    color: indigo;
+    background-color: lavender;
+    border: 1px solid indigo;
+}
+
+.home-section{
+    position: relative;
+    background: lavender;
+    height: 1000vh;
+    left: 320px;
+    width: calc(100% - 320px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.close ~ .home-section{
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.home-section .home-content{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.home-section .home-content .bx-menu,
+.home-section .home-content .text{
+    color: #11101d;
+    font-size: 35px;
+}
+.home-section .home-content .bx-menu{
+    margin: 0 15px;
+    cursor: pointer;
+}
+.home-section .home-content .text{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Account Management*/
+.user-dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 24px;
+    right: 0;
+    margin-left: 800px;
+    margin-right: 30px;
+}
+
+.user-dropdown-btn {
+    background-color: lavender;
+    color: indigo;
+    padding: 5px 15px;
+    border: 1px solid indigo;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: -6px;
+    width: 200px;
+    justify-content: center;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.user-dropdown-btn i {
+    margin-right: 8px;
+}
+
+.user-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lavender;
+    color: indigo;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+    display: block;
+}
+
+.user-dropdown-content a {
+    color: #2c3e50;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-dropdown-content a:hover {
+    background-color: #ecf0f1;
+}
+
+.user-dropdown-btn::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    margin-left: 5px;
+}
+
+@media (max-width: 420px) {
+  .sidebar.close .nav-links li .sub-menu{
+    display: none;
+  }
+}
+
+/* Dashlet Container */
+.dashlet-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Individual Dashlet */
+.dashlet {
+    text-align: center;
+    width: 200px;
+    background-color: lavender;
+}
+
+/* Hollow Circle Styling */
+.circle-hollow {
+    border: 2px solid indigo;
+    border-radius: 50%;
+    width: 80px; /* Adjust the size of the circle */
+    height: 80px; /* Adjust the size of the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.circle-hollow p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: indigo;
+}
+
+.dashlet h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#calendar {
+    width: 90%;
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* Appointment List Container Styles */
+.appointment-list-container {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Appointment List Table Styles */
+.appointment-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.appointment-list th,
+.appointment-list td {
+    text-align: center;
+}
+
+/* Table Header Styles */
+.appointment-list th {
+    background-color: #4B0082; /* Indigo tone */
+    color: #FFF;
+    padding: 10px;
+}
+
+/* Table Row Styles */
+.appointment-list tbody tr {
+    background-color: #E6E6FA; /* Lavender tone */
+}
+
+/* Alternating Row Styles */
+.appointment-list tbody tr:nth-child(even) {
+    background-color: #ffddff; /* LavenderBlush tone */
+}
+
+/* Table Cell Styles */
+.appointment-list td {
+    padding: 10px;
+    border: 1px solid #4B0082; /* Indigo tone */
+}
+
+.admin-update-appointment-btn {
+    background-color: #F8E559;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+}
+
+.admin-update-appointment-btn:hover {
+    color: black;
+    border: 1px solid #F8E559;
+    background-color: #FBF3D5;
+}
+
+.admin-delete-appointment-btn {
+    background-color: #EE4266;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+    margin-top: 10px;
+}
+
+.admin-delete-appointment-btn:hover {
+    color: #EE4266;
+    border: 1px solid #EE4266;
+    background-color: #F8E8EE;
+}
+
+/* Admin New Appointment Form Styles */
+.admin-new-app-form-container {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-new-app-form {
+    width: 98%;
+}
+
+.admin-new-app-form .form-group {
+    margin-bottom: 15px;
+}
+
+.admin-new-app-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+}
+
+.admin-new-app-input,
+.admin-new-app-select {
+    width: calc(100% - 20px); /* Adjusted width for better responsiveness */
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.admin-new-app-btn-submit,
+.admin-new-app-btn-cancel {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.admin-new-app-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.admin-new-app-btn-cancel {
+    background-color: #FF6347;
+}
+
+.admin-new-app-datetime-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-new-app-date-container,
+.admin-new-app-time-container {
+    flex: 1;
+}
+
+/* Admin Update Appointment Form Styles */
+.admin-update-app-form-container {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-update-app-form {
+    width: 98%;
+}
+
+.admin-update-app-form .form-group {
+    margin-bottom: 15px;
+}
+
+.admin-update-app-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+}
+
+.admin-update-app-input,
+.admin-update-app-select {
+    width: calc(100% - 20px); /* Adjusted width for better responsiveness */
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.admin-update-app-btn-submit,
+.admin-update-app-btn-cancel {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.admin-update-app-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.admin-update-app-btn-cancel {
+    background-color: #FF6347;
+}
+
+.admin-update-app-datetime-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-update-app-date-container,
+.admin-update-app-time-container {
+    flex: 1;
+}
+
+
+
+/* Availability List Container Styles */
+.availability-list-container {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Availability List Table Styles */
+.availability-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.availability-list th,
+.availability-list td {
+    text-align: center;
+}
+
+/* Table Header Styles */
+.availability-list th {
+    background-color: #4B0082; /* Indigo tone */
+    color: #FFF;
+    padding: 10px;
+}
+
+/* Table Row Styles */
+.availability-list tbody tr {
+    background-color: #E6E6FA; /* Lavender tone */
+}
+
+/* Alternating Row Styles */
+.availability-list tbody tr:nth-child(even) {
+    background-color: #ffddff; /* LavenderBlush tone */
+}
+
+/* Table Cell Styles */
+.availability-list td {
+    padding: 10px;
+    border: 1px solid #4B0082; /* Indigo tone */
+}
+
+/* Action Buttons Styles */
+.active-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 70%;
+}
+
+.availability-list td .active-btn {
+    margin: 5px;
+    display: inline-block; /* Display each button inline */
+}
+
+.active-btn-info {
+    background-color: #9370DB; /* MediumPurple tone */
+}
+
+.active-btn-danger {
+    background-color: #9932CC; /* DarkOrchid tone */
+}
+
+.availability-list-container ul {
+    list-style: circle; /* Remove default list styles */
+}
+
+.availability-list-container ul li {
+    margin-left: 20px; 
+}
+
+/* Staff New Availability Form Styles */
+.staff-new-ava-form-container {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-new-ava-form {
+    width: 98%;
+}
+
+.staff-new-ava-form .form-group {
+    margin-bottom: 15px;
+}
+
+.staff-new-ava-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+
+.staff-new-ava-input,
+.staff-new-ava-select {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.staff-new-ava-btn-submit,
+.staff-new-ava-btn-cancel {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.staff-new-ava-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.staff-new-ava-btn-cancel {
+    background-color: #FF6347;
+}
+
+.staff-new-ava-datetime-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.staff-new-ava-date-container,
+.staff-new-ava-time-container {
+    flex: 1;
+    margin-right: 10px; 
+}
+
+.staff-new-ava-input {
+    width: calc(100% - 8px); 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.services-checkbox-container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #333;
+    padding-top: 5px;
+}
+
+/*Customer Management*/
+.customer-list-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.customer-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.customer-list-table th,
+.customer-list-table td {
+    text-align: center;
+}
+
+.customer-list-table th {
+    background-color: #4B0082; 
+    color: #FFF;
+    padding: 10px;
+}
+
+.customer-list-table tbody tr {
+    background-color: #E6E6FA; 
+}
+
+.customer-list-table tbody tr:nth-child(even) {
+    background-color: #ffddff;
+}
+
+.customer-list-table td {
+    padding: 10px;
+    border: 1px solid #4B0082;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 70%;
+}
+
+.customer-list-table td .action-btn {
+    margin: 5px;
+    display: inline-block; 
+}
+
+.action-btn-info {
+    background-color: #9370DB; 
+}
+
+.action-btn-danger {
+    background-color: #9932CC; 
+}
+
+.button-container {
+    display: block;
+    margin-bottom: 5px; 
+}
+
+.customer-list-container ul {
+    list-style: circle; 
+}
+
+.customer-list-container ul li {
+    margin-left: 20px; 
+}
+
+.admin-update-customer-btn {
+    background-color: #F8E559;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+}
+
+.admin-update-customer-btn:hover {
+    color: black;
+    border: 1px solid #F8E559;
+    background-color: #FBF3D5;
+}
+
+.admin-delete-customer-btn {
+    background-color: #EE4266;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+    margin-top: 10px;
+}
+
+.admin-delete-customer-btn:hover {
+    color: #EE4266;
+    border: 1px solid #EE4266;
+    background-color: #F8E8EE;
+}
+
+.customer-form-container {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-form {
+    width: 98%;
+}
+
+.customer-form .form-group {
+    margin-bottom: 15px;
+}
+
+.customer-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+
+.customer-input,
+.customer-select {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.customer-btn-submit,
+.customer-btn-cancel {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.customer-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.customer-btn-cancel {
+    background-color: #FF6347;
+}
+
+/* Staff Management */
+.staff-list-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.staff-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.staff-list-table th,
+.staff-list-table td {
+    text-align: center;
+}
+
+.staff-list-table th {
+    background-color: #4B0082; 
+    color: #FFF;
+    padding: 10px;
+}
+
+.staff-list-table tbody tr {
+    background-color: #E6E6FA; 
+}
+
+.staff-list-table tbody tr:nth-child(even) {
+    background-color: #ffddff; 
+}
+
+
+.staff-list-table td {
+    padding: 10px;
+    border: 1px solid #4B0082; 
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 70%;
+}
+
+.staff-list-table td .action-btn {
+    margin: 5px;
+    display: inline-block; 
+}
+
+.action-btn-info {
+    background-color: #9370DB;
+}
+
+.action-btn-danger {
+    background-color: #9932CC; 
+}
+
+.admin-update-staff-btn {
+    background-color: #F8E559;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+}
+
+.admin-update-staff-btn:hover {
+    color: black;
+    border: 1px solid #F8E559;
+    background-color: #FBF3D5;
+}
+
+.admin-delete-staff-btn {
+    background-color: #EE4266;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+    margin-top: 10px;
+}
+
+.admin-delete-staff-btn:hover {
+    color: #EE4266;
+    border: 1px solid #EE4266;
+    background-color: #F8E8EE;
+}
+
+/* Staff Form Styles */
+.staff-form-container {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-form {
+    width: 98%;
+}
+
+.staff-form .form-group {
+    margin-bottom: 15px;
+}
+
+.staff-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+}
+
+.staff-input,
+.staff-select {
+    width: calc(100% - 20px); /* Adjusted width for better responsiveness */
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.staff-btn-submit,
+.staff-btn-cancel {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.staff-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.staff-btn-cancel {
+    background-color: #FF6347;
+}
+
+/* Service Management */
+.service-list-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.service-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.service-list-table th,
+.service-list-table td {
+    text-align: center;
+}
+
+.service-list-table th {
+    background-color: #4B0082; 
+    color: #FFF;
+    padding: 10px;
+}
+
+.service-list-table tbody tr {
+    background-color: #E6E6FA; 
+}
+
+.service-list-table tbody tr:nth-child(even) {
+    background-color: #ffddff; 
+}
+
+.service-list-table td {
+    padding: 10px;
+    border: 1px solid #4B0082; 
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 70%;
+}
+
+.service-list-table td .action-btn {
+    margin: 5px;
+    display: inline-block; 
+}
+
+.action-btn-info {
+    background-color: #9370DB; 
+}
+
+.action-btn-danger {
+    background-color: #9932CC; 
+}
+
+/* Service Form Styles */
+.service-form-container {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-form {
+    width: 98%;
+}
+
+.service-form .form-group {
+    margin-bottom: 15px;
+}
+
+.admin-update-service-btn {
+    background-color: #F8E559;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+}
+
+.admin-update-service-btn:hover {
+    color: black;
+    border: 1px solid #F8E559;
+    background-color: #FBF3D5;
+}
+
+.admin-delete-service-btn {
+    background-color: #EE4266;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block; 
+    text-align: center; 
+    font-family: 'Titillium Web';
+    margin-top: 10px;
+}
+
+.admin-delete-service-btn:hover {
+    color: #EE4266;
+    border: 1px solid #EE4266;
+    background-color: #F8E8EE;
+}
+
+.service-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; /* Align labels to the left */
+}
+
+.service-input,
+.service-textarea,
+.service-select {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.service-textarea {
+    resize: vertical;
+}
+
+.service-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.service-new-app-btn-submit,
+.service-new-app-btn-cancel {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.service-new-app-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.service-new-app-btn-cancel {
+    background-color: #FF6347;
+}
+
+/*Report Generation*/
+.report-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin: 20px;
+  }
+  
+  .report-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  .report-box h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .report-buttons {
+    margin-top: 10px;
+    float: right;
+  }
+  
+  .pdf-btn,
+  .excel-btn {
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .excel-btn {
+    background-color: #28a745;
+  }
+
+  .pdf-btn{
+    margin-right: 20px;
+  }
+  
+
+/*Login Management*/
+.login-logs-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.login-logs-filter{
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.login-logs-table th,
+.login-logs-table td {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.login-logs-table th {
+    background-color: #4B0082; 
+    color: #FFF;
+    padding: 10px;
+}
+
+.login-logs-table tbody tr {
+    background-color: #E6E6FA; 
+}
+
+.login-logs-table tbody tr:nth-child(even) {
+    background-color: #FFE5E5; 
+}
+
+.login-logs-table td {
+    padding: 10px;
+    border: 1px solid #4B0082; 
+}
+
+/* Message Management */
+/*List of message*/
+.message-logs-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.message-logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.message-logs-table th,
+.message-logs-table td {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.message-logs-table th {
+    background-color: #4B0082;
+    color: #FFF;
+    padding: 10px;
+}
+
+.message-logs-table tbody tr {
+    background-color: #E6E6FA;
+}
+
+.message-logs-table tbody tr:nth-child(even) {
+    background-color: #FFE5E5;
+}
+
+.message-logs-table td {
+    padding: 10px;
+    border: 1px solid #4B0082;
+}
+
+.message-details-btn {
+    background-color: #4B0082;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.status {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.new {
+    background-color: #EE4266;
+    color: white;
+}
+
+.replied {
+    background-color: #337357;
+    color: white;
+}
+
+
+.message-details-btn:hover {
+    color: #5a189a;
+    border: 1px solid #5a189a;
+    border-radius: 5px;
+    background-color: lavender;
+}
+
+.message-logs-filter{
+    text-align: left;
+    font-weight: bold;
+}
+
+/*Details of Message*/
+.message-details-container {
+    margin: 20px;
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+}
+
+.message-details-row {
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.message-details-row label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.message-details-row input[type="text"],
+.message-details-row input[type="email"],
+.message-details-row textarea {
+    width: calc(100% - 10px); 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.message-reply-btn button,
+.message-cancel-btn a {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.message-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+
+.message-reply-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+    margin-right: 15px;
+    background-color: indigo;
+    border: 1px solid indigo; 
+}
+
+.message-cancel-btn {
+    background-color: #FF6347; 
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.message-cancel-btn:hover {
+    color: #FF6347; 
+    border: 1px solid #FF6347;
+    background-color: #fff;
+}
+
+/*Role Management*/
+.user-list-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.user-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.user-list-table th,
+.user-list-table td {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.user-list-table th {
+    background-color: #4B0082;
+    color: #FFF;
+    padding: 10px;
+}
+
+.user-list-table tbody tr {
+    background-color: #E6E6FA;
+}
+
+.user-list-table tbody tr:nth-child(even) {
+    background-color: #FFE5E5;
+}
+
+.user-list-table td {
+    padding: 10px;
+    border: 1px solid #4B0082;
+}
+
+/* Handle lowercase email */
+.user-list-table tbody tr td:nth-child(4) {
+    text-transform: lowercase;
+}
+
+select.role-dropdown option {
+    text-align: center;
+}
+
