@@ -146,5 +146,9 @@ http://localhost/appointment-management-salon/
 Developed by @aliseyeap.
 
 ---
+## 📰 Publication
+This system is academically recognized and published in the UTHM Publisher Platform – AITCS Journal @ https://publisher.uthm.edu.my/periodicals/index.php/aitcs/article/view/16459
+
+---
 ## 📄 License
 This project is developed for academic purposes and is not intended for commercial distribution. Please consult the authors for reuse or enhancement.
