@@ -56,13 +56,13 @@ function sendVerificationEmail($email, $verificationCode) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Set the SMTP server to send through
         $mail->SMTPAuth = true;
-        $mail->Username = 'elviratruebeauty@gmail.com'; // SMTP username
-        $mail->Password = 'lldumisyvoelvboc'; // SMTP password
+        $mail->Username = 'your_email@example.com'; // SMTP username
+        $mail->Password = 'your_email_password'; // SMTP password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
         //Recipients
-        $mail->setFrom('elviratruebeauty@gmail.com', 'Elvira True Beauty');
+        $mail->setFrom('your_email@example.com', 'Elvira True Beauty');
         $mail->addAddress($email);
 
         //Content
